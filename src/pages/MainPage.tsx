@@ -3,24 +3,41 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
 import {
+  CarouselContainer,
   LyricsBlock,
   MainPageManifestPicture,
   MainPageManifestWrapper,
   ManifestLyricsBLock,
+  ManifestPictureContainer,
   SliderPicture,
 } from '../components/CommonStyles';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-
+export type TSliderPicture = {
+  url: string;
+  name: string;
+};
 const MainPage = () => {
+  const SliderPictures: TSliderPicture[] = [
+    { url: 'Konj', name: 'Тыбыдындский Конь' },
+    { url: 'Losj', name: 'Лось' },
+    { url: 'Tvarets', name: 'Тварец' },
+    { url: 'Deniska', name: 'Дениска' },
+    { url: 'DiktorskyGolos', name: 'Дикторский голос' },
+    { url: 'Dima', name: 'Дима' },
+    { url: 'Ilya', name: 'Илья Муромец Подкоси Копыто' },
+    { url: 'Koza', name: 'Коза' },
+    { url: 'Kozel', name: 'Козёл' },
+    { url: 'Munnik', name: 'Великий Мунник' },
+  ];
   return (
     <PageWrapper>
       <Header />
       <ContentWrapper>
         <MainPageManifestWrapper>
-          <div>
+          <ManifestPictureContainer>
             <MainPageManifestPicture src="/assets/images/pngs/MainPicture.png"></MainPageManifestPicture>
-          </div>
+          </ManifestPictureContainer>
           <LyricsBlock>
             <ManifestLyricsBLock>
               <p>
@@ -68,21 +85,28 @@ const MainPage = () => {
               </p>
             </ManifestLyricsBLock>
           </LyricsBlock>
-          <Carousel>
-            <div>
-              <SliderPicture src="assets/images/pngs/Deniska.png" />
-              <p className="legend">Дениска</p>
-            </div>
-            <div>
-              <SliderPicture src="assets/images/pngs/Koza.png" />
-              <p className="legend">Коза</p>
-            </div>
-            <div>
-              <SliderPicture src="assets/images/pngs/Kozel.png" />
-              <p className="legend">Козёл</p>
-            </div>
-          </Carousel>
         </MainPageManifestWrapper>
+
+        <CarouselContainer>
+          <h2>Галерея наших героев</h2>
+          <Carousel
+            showArrows={true}
+            showStatus={false}
+            showThumbs={false}
+            infiniteLoop={true}
+            autoPlay={true}
+            interval={2000}
+          >
+            {SliderPictures.map((pers) => {
+              return (
+                <div>
+                  <SliderPicture src={`assets/images/pngs/${pers.url}.png`} />
+                  <p className="legend">{pers.name}</p>
+                </div>
+              );
+            })}
+          </Carousel>
+        </CarouselContainer>
       </ContentWrapper>
       <Footer />
     </PageWrapper>

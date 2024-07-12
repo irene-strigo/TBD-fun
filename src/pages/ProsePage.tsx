@@ -6,7 +6,7 @@ const ProsePage = () => {
   return (
     <PageWrapper>
       <Header />
-      <ContentWrapper>ProsePage</ContentWrapper>
+      <ContentWrapper>Prose Page Work in progress...</ContentWrapper>
       <Footer />
     </PageWrapper>
   );

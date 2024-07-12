@@ -1,8 +1,15 @@
 import React from 'react';
-import { FooterWrapper } from './CommonStyles';
+import { FooterDate, FooterWrapper, HeaderLogoImg } from './CommonStyles';
 
 const Footer = () => {
-  return <FooterWrapper>2024</FooterWrapper>;
+  return (
+    <FooterWrapper>
+      <div>
+        <HeaderLogoImg src="/assets/images/pngs/Losj.png" />
+        <FooterDate>2024</FooterDate>
+      </div>
+    </FooterWrapper>
+  );
 };
 
 export default Footer;

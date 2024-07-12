@@ -33,11 +33,16 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   padding: 10px;
   border: 1px solid black;
+  @media screen and (max-width: 900px) {
+    justify-content: center;
+  }
 `;
 export const FooterWrapper = styled.div`
-  min-height: 1em;
   padding: 10px;
   border: 1px solid black;
+  display: flex;
+
+  justify-content: center;
 `;
 export const HeaderLogoImg = styled.img`
   width: 60px;
@@ -48,14 +53,39 @@ export const LyricsBlock = styled.div`
 `;
 export const ManifestLyricsBLock = styled.div`
   text-align: center;
+  font-size: clamp(1rem, 1.5vw, 2rem);
 `;
 export const MainPageManifestPicture = styled.img`
-  max-width: 25em;
+  max-width: 30em;
+  @media screen and (max-width: 500px) {
+    max-width: 20em;
+  }
+`;
+export const ManifestPictureContainer = styled.div`
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 `;
 export const MainPageManifestWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  padding: 2em;
+  justify-content: space-around;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 export const SliderPicture = styled.img`
   max-width: 20em;
+  padding-bottom: 50px;
+`;
+export const CarouselContainer = styled.div`
+  margin: 2em auto;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+export const FooterDate = styled.div`
+  padding: 0 15px;
 `;

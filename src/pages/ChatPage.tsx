@@ -7,7 +7,7 @@ const ChatPage = () => {
   return (
     <PageWrapper>
       <Header />
-      <ContentWrapper>ChatPage</ContentWrapper>
+      <ContentWrapper>Chat Page Work in progress...</ContentWrapper>
       <Footer />
     </PageWrapper>
   );

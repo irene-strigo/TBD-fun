@@ -7,7 +7,9 @@ const AboutUsPage = () => {
   return (
     <PageWrapper>
       <Header />
-      <ContentWrapper>AboutUsPage</ContentWrapper>
+      <ContentWrapper>
+        <div>About Us Page Work in progress...</div>
+      </ContentWrapper>
       <Footer />
     </PageWrapper>
   );
