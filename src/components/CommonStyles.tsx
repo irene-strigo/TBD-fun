@@ -89,3 +89,45 @@ export const CarouselContainer = styled.div`
 export const FooterDate = styled.div`
   padding: 0 15px;
 `;
+
+export const PageUpLink = styled.a`
+position: sticky;
+  bottom: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 2em;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 2em;
+     &:hover,
+  :focus {
+    background-color: #ce871d;
+    color: #131314;
+  }
+    @media screen and (max-width: 700px) {
+    width: 65px;
+    font-size: 2em;
+    left: 14em;
+    margin: 0 5px;
+  }
+}
+`;
+export const ListLink = styled.a`
+  color: black;
+  text-decoration: none;
+  transition: transform 0.2s;
+  margin-bottom: 1em;
+  &:hover,
+  :focus {
+    transform: scale(1.5);
+    color: #ce871d;
+  }
+`;
+export const FlyingBastards = styled.img`
+  max-width: 90%;
+`;

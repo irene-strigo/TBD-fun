@@ -13,4 +13,5 @@ export const ContentWrapper = styled.div`
   margin: 0 auto;
   align-items: center;
   flex-direction: column;
+  padding: 10px;
 `;

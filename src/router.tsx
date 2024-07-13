@@ -3,9 +3,9 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import { MainPage, AboutUsPage } from './pages';
-import PoetryPage from './pages/PoetryPage';
 import ChatPage from './pages/ChatPage';
 import ProsePage from './pages/ProsePage';
+import BalladesPage from './pages/BalladesPage';
 
 export const router = createBrowserRouter([
   {
@@ -18,8 +18,8 @@ export const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path: '/poetry',
-    element: <PoetryPage />,
+    path: '/ballades',
+    element: <BalladesPage />,
   },
   {
     path: '/prose',

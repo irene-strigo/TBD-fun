@@ -21,6 +21,9 @@ const MainPage = () => {
   const SliderPictures: TSliderPicture[] = [
     { url: 'Konj', name: 'Тыбыдындский Конь' },
     { url: 'Losj', name: 'Лось' },
+    { url: 'Mudak', name: 'Летающий Мудак' },
+    { url: 'Herli', name: 'Царевна Херли' },
+    { url: 'Shibzdik', name: 'Шибздик' },
     { url: 'Tvarets', name: 'Тварец' },
     { url: 'Deniska', name: 'Дениска' },
     { url: 'DiktorskyGolos', name: 'Дикторский голос' },
