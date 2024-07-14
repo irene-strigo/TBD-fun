@@ -32,6 +32,9 @@ const MainPage = () => {
     { url: 'Koza', name: 'Коза' },
     { url: 'Kozel', name: 'Козёл' },
     { url: 'Munnik', name: 'Великий Мунник' },
+    { url: 'Ljuba', name: 'ЛюбА' },
+    { url: 'NashYunijDrug', name: 'Наш юный друг' },
+    { url: 'Zora', name: 'Жора' },
   ];
   return (
     <PageWrapper>
