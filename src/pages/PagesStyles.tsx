@@ -6,7 +6,7 @@ export const PageWrapper = styled.div`
 `;
 export const ContentWrapper = styled.div`
   height: 100%;
-  min-height: 50vh;
+  min-height: 30vh;
   display: flex;
   justify-content: center;
   max-width: 1440px;

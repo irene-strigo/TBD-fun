@@ -131,3 +131,11 @@ export const ListLink = styled.a`
 export const FlyingBastards = styled.img`
   max-width: 90%;
 `;
+export const CenteredContent = styled.div`
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+`;
+export const PanImg = styled.img`
+  max-width: 90%;
+`;
