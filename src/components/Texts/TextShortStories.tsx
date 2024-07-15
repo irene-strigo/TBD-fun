@@ -1,4 +1,4 @@
-import { CenteredContent, LyricsBlock } from './CommonStyles';
+import { CenteredContent, LyricsBlock } from '../CommonStyles';
 
 export const ShortStories = [
   {
@@ -100,7 +100,7 @@ export const ShortStories = [
             <p>А&nbsp;не&nbsp;то&nbsp;настанет&hellip;</p>
             <p>!!! ХОХОТ!!!</p>
             <p>
-              Ира: такая ситуация, из&nbsp;которой даже сам Белецкий не&nbsp;нашёл&nbsp;бы выхода.
+              Ира: такая ситуация, из&nbsp;которой даже сам Понтецкий не&nbsp;нашёл&nbsp;бы выхода.
             </p>
             <p>ХОХОТ</p>
             <p>Ира:&nbsp;&mdash; ладно, кроме шуток:</p>

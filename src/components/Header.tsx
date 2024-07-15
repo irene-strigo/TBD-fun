@@ -14,6 +14,7 @@ const Header = () => {
     { id: 1, link: '/main', label: 'Главная страница' },
     { id: 2, link: '/ballades', label: 'Баллады Великого Мунника' },
     { id: 3, link: '/prose', label: 'Проза' },
+    { id: 3, link: '/poetry', label: 'Стихи' },
     { id: 4, link: '/chat', label: 'Чат' },
     { id: 5, link: '/about-us', label: 'Про нас' },
   ];

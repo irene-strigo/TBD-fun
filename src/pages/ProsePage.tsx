@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Footer } from '../components';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
 import { ListLink, PageUpLink, PanImg } from '../components/CommonStyles';
-import { ShortStories } from '../components/TextShortStories';
+import { ShortStories } from '../components/Texts/TextShortStories';
 
 const ProsePage = () => {
   return (

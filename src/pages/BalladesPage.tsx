@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Footer } from '../components';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
 import { FlyingBastards, ListLink, LyricsBlock, PageUpLink } from '../components/CommonStyles';
-import { Ballades } from '../components/TextBallades';
+import { Ballades } from '../components/Texts/TextBallades';
 const BalladesPage = () => {
   return (
     <PageWrapper>

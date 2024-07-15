@@ -58,7 +58,7 @@ export const ManifestLyricsBLock = styled.div`
 export const MainPageManifestPicture = styled.img`
   max-width: 30em;
   @media screen and (max-width: 500px) {
-    max-width: 20em;
+    max-width: 19em;
   }
 `;
 export const ManifestPictureContainer = styled.div`

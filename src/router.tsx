@@ -6,6 +6,7 @@ import { MainPage, AboutUsPage } from './pages';
 import ChatPage from './pages/ChatPage';
 import ProsePage from './pages/ProsePage';
 import BalladesPage from './pages/BalladesPage';
+import PoetryPage from './pages/PoetryPage';
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
   {
     path: '/prose',
     element: <ProsePage />,
+  },
+  {
+    path: '/poetry',
+    element: <PoetryPage />,
   },
   {
     path: '/chat',

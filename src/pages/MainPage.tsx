@@ -11,7 +11,7 @@ import {
   ManifestPictureContainer,
   SliderPicture,
 } from '../components/CommonStyles';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 export type TSliderPicture = {
   url: string;
@@ -35,6 +35,8 @@ const MainPage = () => {
     { url: 'Ljuba', name: 'ЛюбА' },
     { url: 'NashYunijDrug', name: 'Наш юный друг' },
     { url: 'Zora', name: 'Жора' },
+    { url: 'Hryakulenko', name: 'Хрякуленко Дима' },
+    { url: 'Ja', name: '"Я"' },
   ];
   return (
     <PageWrapper>
