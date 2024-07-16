@@ -139,3 +139,20 @@ export const CenteredContent = styled.div`
 export const PanImg = styled.img`
   max-width: 90%;
 `;
+export const BalladesPageContainer = styled.div``;
+/*export const MudakContainer = styled.div`
+ position: relative;
+  cursor: pointer;
+  width: 177px;
+  height: 160px;
+  left: 0;
+  transition: left 5s cubic-bezier(0, 0, 1, 1);
+`*/
+export const MudakPicture = styled.img`
+  position: relative;
+  cursor: pointer;
+  width: 177px;
+  height: 160px;
+  left: 0;
+  transition: left 5s cubic-bezier(0, 0, 1, 1);
+`;
