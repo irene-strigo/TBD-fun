@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header, Footer } from '../components';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
 import {
@@ -12,18 +12,32 @@ import { Ballades } from '../components/Texts/TextBallades';
 import { FallingBastard } from '../components/AnimatedComponents';
 
 const BalladesPage = () => {
-  let RRh = 0; // Храним предыдущее значение
-  function randomAction(a: number, b: number): number {
-    const c = Math.floor(Math.random() * (b - a + 1)) + a; // Получаем рандомное число
-    return c !== RRh ? (RRh = c) : randomAction(a, b);
-  }
-  randomAction(1, 20);
+  const [animAction, setAnimAction] = useState(true);
+  const handleClick = (action: boolean) => {
+    return action === true ? setAnimAction(false) : setAnimAction(true);
+  };
 
+  function getRandomInt(min: number, max: number) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  const repeatAnimAction = () => {
+    return setInterval(() => setAnimAction(true), getRandomInt(10000, 40000));
+  };
+  repeatAnimAction();
   return (
     <PageWrapper>
       <Header />
       <BalladesPageContainer>
-        <FallingBastard src="/assets/images/pngs/Mudak.png" $animated />
+        <FallingBastard
+          src="/assets/images/pngs/Mudak.png"
+          animated={animAction}
+          onClick={() => {
+            handleClick(animAction);
+          }}
+        />
+
         <ContentWrapper id="List">
           <ContentWrapper>
             {Ballades.map((ballade) => {

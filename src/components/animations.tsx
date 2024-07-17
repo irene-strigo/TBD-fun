@@ -17,3 +17,12 @@ export const fall = keyframes`
     100% {
       transform: translateY(110vh);
 }`;
+
+export const diagonalRight = keyframes`
+0% {
+        transform: translatex(0) translatey(0)
+    }
+    100% {
+        transform: translatex(110vh) translatey(110vh);
+    }
+}`;
