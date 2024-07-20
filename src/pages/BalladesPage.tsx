@@ -23,7 +23,7 @@ const BalladesPage = () => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   const repeatAnimAction = () => {
-    return setInterval(() => setAnimAction(true), getRandomInt(10000, 40000));
+    return setInterval(() => setAnimAction(true), getRandomInt(20000, 40000));
   };
   repeatAnimAction();
   return (
@@ -58,7 +58,7 @@ const BalladesPage = () => {
             </ContentWrapper>
           );
         })}
-        <PageUpLink href="#List">&#11014;</PageUpLink>
+        <PageUpLink href="#List">&#9650;</PageUpLink>
       </BalladesPageContainer>
       <Footer />
     </PageWrapper>

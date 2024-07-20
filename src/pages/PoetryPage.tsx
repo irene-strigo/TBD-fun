@@ -25,7 +25,7 @@ const PoetryPage = () => {
           </ContentWrapper>
         );
       })}
-      <PageUpLink href="#List">&#11014;</PageUpLink>
+      <PageUpLink href="#List">&#9650;</PageUpLink>
       <Footer />
     </PageWrapper>
   );

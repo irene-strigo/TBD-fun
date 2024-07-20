@@ -32,14 +32,14 @@ export const HeaderWrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   padding: 10px;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   @media screen and (max-width: 900px) {
     justify-content: center;
   }
 `;
 export const FooterWrapper = styled.div`
   padding: 10px;
-  border: 1px solid black;
+  border-top: 1px solid black;
   display: flex;
 
   justify-content: center;
@@ -93,7 +93,10 @@ export const FooterDate = styled.div`
 export const PageUpLink = styled.a`
 position: sticky;
   bottom: 5px;
-    color: black;
+  background-color: #f3f9a5;
+  border: 1px solid #f3f9a5;
+  color: #511f31;
+  cursor: pointer;
     text-decoration: none;
     font-size: 40px;
     display: flex;
@@ -101,13 +104,13 @@ position: sticky;
     justify-content: center;
     padding: 10px;
     width: 2em;
-    border: 1px solid black;
+
     border-radius: 50%;
     margin: 0 2em;
      &:hover,
   :focus {
-    background-color: #ce871d;
-    color: #131314;
+    background-color: #f7f9ff;
+    color: #2c5777;
   }
     @media screen and (max-width: 700px) {
     width: 65px;
@@ -140,14 +143,6 @@ export const PanImg = styled.img`
   max-width: 90%;
 `;
 export const BalladesPageContainer = styled.div``;
-/*export const MudakContainer = styled.div`
- position: relative;
-  cursor: pointer;
-  width: 177px;
-  height: 160px;
-  left: 0;
-  transition: left 5s cubic-bezier(0, 0, 1, 1);
-`*/
 export const MudakPicture = styled.img`
   position: relative;
   cursor: pointer;
@@ -155,4 +150,38 @@ export const MudakPicture = styled.img`
   height: 160px;
   left: 0;
   transition: left 5s cubic-bezier(0, 0, 1, 1);
+`;
+
+export const AboutUsPageContainer = styled.div`
+  width: 80%;
+  margin: 0 auto;
+`;
+export const AuthorImage = styled.img`
+  max-width: 328px;
+`;
+
+export const PersonContainer = styled.div`
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  margin: 10px;
+  gap: 20px;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+`;
+export const PersonTextContainer = styled.div`
+  padding: 20px;
+  max-width: 65%;
+  @media screen and (max-width: 700px) {
+    max-width: 90%;
+  }
+`;
+export const PersonText = styled.div`
+  margin: 20px 0;
+  font-size: clamp(1rem, 1vw, 3rem);
+`;
+export const AboutUsText = styled.p`
+  margin: 2em 0;
+  font-size: clamp(1rem, 1.5vw, 3rem);
 `;

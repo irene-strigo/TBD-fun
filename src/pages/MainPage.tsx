@@ -100,7 +100,7 @@ const MainPage = () => {
           <Carousel
             showArrows={true}
             showStatus={false}
-            showThumbs={false}
+            showThumbs={true}
             infiniteLoop={true}
             autoPlay={true}
             interval={2000}
