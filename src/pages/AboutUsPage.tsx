@@ -23,7 +23,7 @@ const AboutUsPage = () => {
     {
       id: 2,
       name: 'Лена',
-      foto: '/assets/images/ai-portraits/Lena1.jpg',
+      foto: '/assets/images/ai-portraits/Lena1.png',
       text: (
         <>
           Талантливая рисовальщица, придумавшая и&nbsp;воплотившая в&nbsp;жизнь все образы наших
