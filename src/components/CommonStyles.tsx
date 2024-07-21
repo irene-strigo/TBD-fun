@@ -34,7 +34,7 @@ export const HeaderWrapper = styled.div`
   padding: 10px;
   border-bottom: 1px solid black;
   @media screen and (max-width: 900px) {
-    justify-content: center;
+    justify-content: space-between;
   }
 `;
 export const FooterWrapper = styled.div`
@@ -94,7 +94,7 @@ export const PageUpLink = styled.a`
 position: sticky;
   bottom: 5px;
   background-color: #f3f9a5;
-  border: 1px solid #f3f9a5;
+  border: 1px solid #511f31;
   color: #511f31;
   cursor: pointer;
     text-decoration: none;
@@ -184,4 +184,36 @@ export const PersonText = styled.div`
 export const AboutUsText = styled.p`
   margin: 2em 0;
   font-size: clamp(1rem, 1.5vw, 3rem);
+`;
+export const HeaderButtonsContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+  @media screen and (max-width: 495px) {
+    display: none;
+    
+    }
+  }
+ `;
+export const BurgerButtonsContainer = styled.div`
+ display: none;
+
+ @media screen and (max-width: 495px) {
+   display: flex;
+   z-index:2;
+   flex-direction:column;
+   position: absolute;
+       width: 100%;
+       top: 5em;
+       left: 0px;
+   }
+ }
+`;
+
+export const BurgerSignContainer = styled.div`
+  display: none;
+  font-size: 3em;
+  color: #511f31;
+  @media screen and (max-width: 495px) {
+    display: block;
+  }
 `;

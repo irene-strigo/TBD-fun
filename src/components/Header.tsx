@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import NavigationButton from './NavigationButton';
-import { HeaderLogoImg, HeaderWrapper } from './CommonStyles';
+import {
+  BurgerButtonsContainer,
+  HeaderButtonsContainer,
+  HeaderLogoImg,
+  HeaderWrapper,
+} from './CommonStyles';
+import BurgerButton from './BurgerButton';
 
 export type Button = {
   id: number;
@@ -10,6 +16,11 @@ export type Button = {
 };
 
 const Header = () => {
+  const [isBurgerOpen, setBurgerOpen] = useState(false);
+  function processBurger() {
+    return isBurgerOpen ? setBurgerOpen(false) : setBurgerOpen(true);
+  }
+
   const headerButtons: Button[] = [
     { id: 1, link: '/main', label: 'Главная страница' },
     { id: 2, link: '/ballades', label: 'Баллады Великого Мунника' },
@@ -23,9 +34,39 @@ const Header = () => {
       <div>
         <HeaderLogoImg src="/assets/images/pngs/Munnik.png"></HeaderLogoImg>
       </div>
-      {headerButtons.map((button) => (
-        <NavigationButton key={button.id} link={button.link} label={button.label} />
-      ))}
+      <HeaderButtonsContainer>
+        {headerButtons.map((button) => (
+          <NavigationButton
+            key={button.id}
+            link={button.link}
+            label={button.label}
+            onClick={() => {
+              setBurgerOpen(false);
+            }}
+          />
+        ))}
+      </HeaderButtonsContainer>
+      {!isBurgerOpen && (
+        <BurgerButtonsContainer>
+          {headerButtons.map((button) => (
+            <NavigationButton
+              key={button.id}
+              link={button.link}
+              label={button.label}
+              onClick={() => {
+                setBurgerOpen(false);
+              }}
+            />
+          ))}
+        </BurgerButtonsContainer>
+      )}
+      <BurgerButton
+        sign={isBurgerOpen ? <>&equiv;</> : <>&times;</>}
+        isOpen={false}
+        onClick={() => {
+          processBurger();
+        }}
+      ></BurgerButton>
     </HeaderWrapper>
   );
 };
