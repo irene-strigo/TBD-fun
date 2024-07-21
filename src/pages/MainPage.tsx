@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
 import { ContentWrapper, PageWrapper } from './PagesStyles';
 import {
   CarouselContainer,
@@ -109,7 +110,7 @@ const MainPage = () => {
               return (
                 <div>
                   <SliderPicture src={`assets/images/pngs/${pers.url}.png`} />
-                  <p className="legend">{pers.name}</p>
+                  <p className="legend slLegend">{pers.name}</p>
                 </div>
               );
             })}
