@@ -17,7 +17,7 @@ const ProsePage = () => {
       </ContentWrapper>
       {ShortStories.map((story) => {
         return (
-          <ContentWrapper id={story.id}>
+          <ContentWrapper key={story.id} id={story.id}>
             <h2>{story.heading}</h2>
             <div>{story.text}</div>
           </ContentWrapper>

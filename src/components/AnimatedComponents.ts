@@ -8,13 +8,13 @@ interface FAIconProps extends FontAwesomeIconProps {
   $animated?: boolean;
 }
 interface IMGProps {
-  animated?: boolean;
+  $animated?: boolean;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export const FallingBastard = styled.img<IMGProps>`
-  ${({ animated }) =>
-    animated
+  ${({ $animated }) =>
+    $animated
       ? css`
           opacity: 1;
           animation: ${fall} 3s cubic-bezier(1, -0.42, 0.42, -0.39) infinite;

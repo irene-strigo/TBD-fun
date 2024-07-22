@@ -181,7 +181,7 @@ export const PersonText = styled.div`
   margin: 20px 0;
   font-size: clamp(1rem, 1vw, 3rem);
 `;
-export const AboutUsText = styled.p`
+export const AboutUsText = styled.div`
   margin: 2em 0;
   font-size: clamp(1rem, 1.5vw, 3rem);
 `;

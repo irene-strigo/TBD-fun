@@ -32,7 +32,7 @@ const BalladesPage = () => {
       <BalladesPageContainer>
         <FallingBastard
           src="/assets/images/pngs/Mudak.png"
-          animated={animAction}
+          $animated={animAction}
           onClick={() => {
             handleClick(animAction);
           }}
@@ -41,7 +41,11 @@ const BalladesPage = () => {
         <ContentWrapper id="List">
           <ContentWrapper>
             {Ballades.map((ballade) => {
-              return <ListLink href={`#${ballade.id}`}>{ballade.heading}</ListLink>;
+              return (
+                <ListLink key={ballade.id} href={`#${ballade.id}`}>
+                  {ballade.heading}
+                </ListLink>
+              );
             })}
           </ContentWrapper>
         </ContentWrapper>
@@ -52,7 +56,7 @@ const BalladesPage = () => {
 
         {Ballades.map((ballade) => {
           return (
-            <ContentWrapper id={ballade.id}>
+            <ContentWrapper key={ballade.id} id={ballade.id}>
               <h2>{ballade.heading}</h2>
               <LyricsBlock>{ballade.text}</LyricsBlock>
             </ContentWrapper>

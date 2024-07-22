@@ -61,7 +61,7 @@ const AboutUsPage = () => {
           </AboutUsText>
         </ContentWrapper>
         {Authors.map((author) => (
-          <Person name={author.name} text={author.text} image={author.foto} />
+          <Person key={author.id} name={author.name} text={author.text} image={author.foto} />
         ))}
         <div>
           {' '}

@@ -19,7 +19,7 @@ const PoetryPage = () => {
       </ContentWrapper>
       {Poetry.map((item) => {
         return (
-          <ContentWrapper id={item.id}>
+          <ContentWrapper key={item.id} id={item.id}>
             <h2>{item.heading}</h2>
             <LyricsBlock>{item.text}</LyricsBlock>
           </ContentWrapper>

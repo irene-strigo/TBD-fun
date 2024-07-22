@@ -15,29 +15,30 @@ import {
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 export type TSliderPicture = {
+  id: number;
   url: string;
   name: string;
 };
 const MainPage = () => {
   const SliderPictures: TSliderPicture[] = [
-    { url: 'Konj', name: 'Тыбыдындский Конь' },
-    { url: 'Losj', name: 'Лось' },
-    { url: 'Mudak', name: 'Летающий Мудак' },
-    { url: 'Herli', name: 'Царевна Херли' },
-    { url: 'Shibzdik', name: 'Шибздик' },
-    { url: 'Tvarets', name: 'Тварец' },
-    { url: 'Deniska', name: 'Дениска' },
-    { url: 'DiktorskyGolos', name: 'Дикторский голос' },
-    { url: 'Dima', name: 'Дима' },
-    { url: 'Ilya', name: 'Илья Муромец Подкоси Копыто' },
-    { url: 'Koza', name: 'Коза' },
-    { url: 'Kozel', name: 'Козёл' },
-    { url: 'Munnik', name: 'Великий Мунник' },
-    { url: 'Ljuba', name: 'ЛюбА' },
-    { url: 'NashYunijDrug', name: 'Наш юный друг' },
-    { url: 'Zora', name: 'Жора' },
-    { url: 'Hryakulenko', name: 'Хрякуленко Дима' },
-    { url: 'Ja', name: '"Я"' },
+    { id: 1, url: 'Konj', name: 'Тыбыдындский Конь' },
+    { id: 2, url: 'Losj', name: 'Лось' },
+    { id: 3, url: 'Mudak', name: 'Летающий Мудак' },
+    { id: 4, url: 'Herli', name: 'Царевна Херли' },
+    { id: 5, url: 'Shibzdik', name: 'Шибздик' },
+    { id: 6, url: 'Tvarets', name: 'Тварец' },
+    { id: 7, url: 'Deniska', name: 'Дениска' },
+    { id: 8, url: 'DiktorskyGolos', name: 'Дикторский голос' },
+    { id: 9, url: 'Dima', name: 'Дима' },
+    { id: 10, url: 'Ilya', name: 'Илья Муромец Подкоси Копыто' },
+    { id: 11, url: 'Koza', name: 'Коза' },
+    { id: 12, url: 'Kozel', name: 'Козёл' },
+    { id: 13, url: 'Munnik', name: 'Великий Мунник' },
+    { id: 14, url: 'Ljuba', name: 'ЛюбА' },
+    { id: 15, url: 'NashYunijDrug', name: 'Наш юный друг' },
+    { id: 16, url: 'Zora', name: 'Жора' },
+    { id: 17, url: 'Hryakulenko', name: 'Хрякуленко Дима' },
+    { id: 18, url: 'Ja', name: '"Я"' },
   ];
   return (
     <PageWrapper>
@@ -101,14 +102,14 @@ const MainPage = () => {
           <Carousel
             showArrows={true}
             showStatus={false}
-            showThumbs={true}
+            showThumbs={false}
             infiniteLoop={true}
             autoPlay={true}
             interval={2000}
           >
             {SliderPictures.map((pers) => {
               return (
-                <div>
+                <div key={pers.id}>
                   <SliderPicture src={`assets/images/pngs/${pers.url}.png`} />
                   <p className="legend slLegend">{pers.name}</p>
                 </div>
