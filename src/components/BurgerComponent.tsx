@@ -8,7 +8,7 @@ type Props = {
 const BurgerComponent = ({ isOpen }: Props) => {
   return (
     <BurgerButtonsContainer>
-      isOpen={isOpen}
+      {isOpen}
       {headerButtons.map((button) => (
         <NavigationButton key={button.id} link={button.link} label={button.label} />
       ))}
