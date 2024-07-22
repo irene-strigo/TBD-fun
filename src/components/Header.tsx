@@ -40,7 +40,7 @@ const Header = () => {
         </>
       )}
       <BurgerButton
-        sign={isBurgerOpen ? <>&equiv;</> : <>&times;</>}
+        sign={isBurgerOpen ? <>&times;</> : <>&equiv;</>}
         isOpen={false}
         onClick={() => {
           processBurger();
