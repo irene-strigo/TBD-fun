@@ -217,3 +217,42 @@ export const BurgerSignContainer = styled.div`
     display: block;
   }
 `;
+export const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #511f31;
+  align-items: center;
+  width: fit-content;
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: 5px;
+`;
+
+export const FormInput = styled.input`
+  min-height: 3em;
+  min-width: 20em;
+  color: #511f31;
+  background-color: #f7f9ff;
+  border: 1px solid #511f31;
+  border-radius: 5px;
+`;
+
+export const FormSubmitBtn = styled.input`
+  min-height: 3em;
+  min-width: 15em;
+  background-color: #f3f9a5;
+  border: 1px solid #511f31;
+  border-radius: 5px;
+`;
+
+export const ErrorDiv = styled.div`
+  color: red;
+  display: flex;
+  text-align: center;
+`;
+
+export const FormFieldLabel = styled.label`
+  background-color: #511f31;
+  color: #f3f9a5;
+`;
