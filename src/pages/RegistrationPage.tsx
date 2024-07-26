@@ -10,18 +10,16 @@ import {
   FormInput,
   FormSubmitBtn,
   PasswordInputContainer,
-  RegistrationPageInfoDiv,
   ShowHideIconImg,
   StyledForm,
   ToggleButton,
 } from '../components/CommonStyles';
-import NavigationButton from '../components/NavigationButton';
 
 type Inputs = {
   login: string;
   password: string;
 };
-const LogInPage = () => {
+const RegistrationPage = () => {
   const [inputType, setInputType] = useState('password');
   const [btnLabel, setBtnLabel] = useState(
     <ShowHideIconImg src="/assets/Icons/show-eye.png"></ShowHideIconImg>,
@@ -48,12 +46,9 @@ const LogInPage = () => {
   return (
     <PageWrapper>
       <Header />
-      <RegistrationPageInfoDiv>
-        <div>Нет аккаунта?</div> <div>Зарегистрируйтесь на сайте</div>
-        <NavigationButton key={8} link={'/registration'} label={'Регистрация'} />
-      </RegistrationPageInfoDiv>
+
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <FormFieldLabel>Псевдоним:</FormFieldLabel>
+        <FormFieldLabel>Выберите псевдоним:</FormFieldLabel>
 
         <FormInput
           {...register('login', {
@@ -85,6 +80,30 @@ const LogInPage = () => {
           />
         </PasswordInputContainer>
         {errors.password && <FormErrorSpan>Это поле обязательно</FormErrorSpan>}
+        <FormFieldLabel>Повторите пароль:</FormFieldLabel>
+        <PasswordInputContainer>
+          <ToggleButton
+            disabled={btnDisabled}
+            type={'button'}
+            onClick={(evt) => {
+              evt.preventDefault();
+              togglePassInput();
+            }}
+          >
+            {btnLabel}
+          </ToggleButton>
+          <FormInput
+            type={inputType}
+            {...register('password', {
+              required: true,
+              onChange() {
+                setBtnDisabled(false);
+                console.log('click');
+              },
+            })}
+          />
+        </PasswordInputContainer>
+        {errors.password && <FormErrorSpan>Это поле обязательно</FormErrorSpan>}
 
         <FormSubmitBtn type="submit" />
       </StyledForm>
@@ -93,4 +112,4 @@ const LogInPage = () => {
   );
 };
 
-export default LogInPage;
+export default RegistrationPage;

@@ -11,7 +11,6 @@ export const NavButton = styled(Link)`
   padding: 10px 10px;
   text-align: center;
   justify-content: center;
-  margin-left: 20px;
   text-decoration: none;
   font-size: clamp(1rem, 1vw, 1.5rem);
   white-space: nowrap;
@@ -188,6 +187,8 @@ export const AboutUsText = styled.div`
 export const HeaderButtonsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
   @media screen and (max-width: 495px) {
     display: none;
     
@@ -222,6 +223,7 @@ export const StyledForm = styled.form`
   flex-direction: column;
   gap: 1em;
   background-color: #511f31;
+
   align-items: center;
   width: fit-content;
   margin: 2em auto;
@@ -236,6 +238,8 @@ export const FormInput = styled.input`
   background-color: #f7f9ff;
   border: 1px solid #511f31;
   border-radius: 5px;
+  padding: 5px;
+  position: relative;
 `;
 
 export const FormSubmitBtn = styled.input`
@@ -255,4 +259,34 @@ export const ErrorDiv = styled.div`
 export const FormFieldLabel = styled.label`
   background-color: #511f31;
   color: #f3f9a5;
+`;
+export const FormErrorSpan = styled.span`
+  background-color: #511f31;
+  color: red;
+`;
+
+export const ToggleButton = styled.button`
+  background-color: #eaf0ff;
+  border: none;
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 5px;
+`;
+
+export const ShowHideIconImg = styled.img`
+  max-width: 25px;
+  background-color: #eaf0ff;
+`;
+export const PasswordInputContainer = styled.div`
+  position: relative;
+  border-radius: 5px;
+`;
+export const RegistrationPageInfoDiv = styled.div`
+  margin: 10px auto;
+  max-width: 20em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
 `;

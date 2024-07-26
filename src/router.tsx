@@ -8,6 +8,7 @@ import ProsePage from './pages/ProsePage';
 import BalladesPage from './pages/BalladesPage';
 import PoetryPage from './pages/PoetryPage';
 import LogInPage from './pages/LoginPage';
+import RegistrationPage from './pages/RegistrationPage';
 
 export const router = createBrowserRouter([
   {
@@ -42,5 +43,9 @@ export const router = createBrowserRouter([
   {
     path: '/log-in',
     element: <LogInPage />,
+  },
+  {
+    path: '/registration',
+    element: <RegistrationPage />,
   },
 ]);
