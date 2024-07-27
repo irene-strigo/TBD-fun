@@ -19,6 +19,7 @@ type Inputs = {
   login: string;
   password: string;
   passwordRepeate: string;
+  confirm: string;
 };
 const RegistrationPage = () => {
   const [inputType, setInputType] = useState('password');
@@ -98,7 +99,16 @@ const RegistrationPage = () => {
           />
         </PasswordInputContainer>
         {errors.passwordRepeate && <FormErrorSpan>{errors.passwordRepeate.message}</FormErrorSpan>}
-
+        <FormFieldLabel>
+          Торжественно обещаю писать только бред и ничего кроме бреда!
+        </FormFieldLabel>
+        <FormInput
+          type={'checkbox'}
+          {...register('confirm', {
+            required: 'это поле обязательно',
+          })}
+        />
+        {errors.confirm && <FormErrorSpan>{errors.confirm.message}</FormErrorSpan>}
         <FormSubmitBtn type="submit" />
       </StyledForm>
       <Footer />

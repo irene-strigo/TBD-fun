@@ -200,7 +200,7 @@ export const BurgerButtonsContainer = styled.div`
 
  @media screen and (max-width: 495px) {
    display: flex;
-   z-index:2;
+   z-index:100;
    flex-direction:column;
    position: absolute;
        width: 100%;
@@ -246,6 +246,7 @@ export const FormSubmitBtn = styled.input`
   min-height: 3em;
   min-width: 15em;
   background-color: #f3f9a5;
+  color: #511f31;
   border: 1px solid #511f31;
   border-radius: 5px;
 `;
@@ -259,6 +260,7 @@ export const ErrorDiv = styled.div`
 export const FormFieldLabel = styled.label`
   background-color: #511f31;
   color: #f3f9a5;
+  text-align: center;
 `;
 export const FormErrorSpan = styled.span`
   background-color: #511f31;
@@ -266,17 +268,17 @@ export const FormErrorSpan = styled.span`
 `;
 
 export const ToggleButton = styled.button`
-  background-color: #eaf0ff;
+  background-color: rgb(247, 249, 255);
   border: none;
   position: absolute;
   z-index: 2;
-  right: 10px;
+  right: 7px;
   top: 5px;
 `;
 
 export const ShowHideIconImg = styled.img`
-  max-width: 25px;
-  background-color: #eaf0ff;
+  max-width: 2em;
+  background-color: rgb(247, 249, 255);
 `;
 export const PasswordInputContainer = styled.div`
   position: relative;
