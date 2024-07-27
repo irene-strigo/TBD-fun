@@ -43,7 +43,7 @@ const LogInPage = () => {
 
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => alert(JSON.stringify(data));
 
   return (
     <PageWrapper>

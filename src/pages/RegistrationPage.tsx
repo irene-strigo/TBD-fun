@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { PageWrapper } from './PagesStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -18,9 +18,11 @@ import {
 type Inputs = {
   login: string;
   password: string;
+  passwordRepeate: string;
 };
 const RegistrationPage = () => {
   const [inputType, setInputType] = useState('password');
+
   const [btnLabel, setBtnLabel] = useState(
     <ShowHideIconImg src="/assets/Icons/show-eye.png"></ShowHideIconImg>,
   );
@@ -35,14 +37,16 @@ const RegistrationPage = () => {
       setBtnLabel(<ShowHideIconImg src="/assets/Icons/show-eye.png"></ShowHideIconImg>);
     }
   };
+
   const {
     register,
     handleSubmit,
-
+    watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
+  const onSubmit: SubmitHandler<Inputs> = (data) => alert(JSON.stringify(data));
+  const password = useRef({});
+  password.current = watch('password', '');
   return (
     <PageWrapper>
       <Header />
@@ -52,10 +56,11 @@ const RegistrationPage = () => {
 
         <FormInput
           {...register('login', {
-            required: true,
+            required: 'это поле обязательно',
           })}
         />
-        {errors.login && <FormErrorSpan>Это поле обязательно</FormErrorSpan>}
+        {errors.login && <FormErrorSpan>{errors.login.message}</FormErrorSpan>}
+
         <FormFieldLabel>Пароль:</FormFieldLabel>
         <PasswordInputContainer>
           <ToggleButton
@@ -71,39 +76,28 @@ const RegistrationPage = () => {
           <FormInput
             type={inputType}
             {...register('password', {
-              required: true,
+              required: 'это поле обязательно',
               onChange() {
                 setBtnDisabled(false);
-                console.log('click');
               },
             })}
           />
         </PasswordInputContainer>
-        {errors.password && <FormErrorSpan>Это поле обязательно</FormErrorSpan>}
+        {errors.password && <FormErrorSpan>{errors.password.message}</FormErrorSpan>}
         <FormFieldLabel>Повторите пароль:</FormFieldLabel>
         <PasswordInputContainer>
-          <ToggleButton
-            disabled={btnDisabled}
-            type={'button'}
-            onClick={(evt) => {
-              evt.preventDefault();
-              togglePassInput();
-            }}
-          >
-            {btnLabel}
-          </ToggleButton>
           <FormInput
-            type={inputType}
-            {...register('password', {
-              required: true,
+            type={'text'}
+            {...register('passwordRepeate', {
+              required: 'это поле обязательно',
               onChange() {
                 setBtnDisabled(false);
-                console.log('click');
               },
+              validate: (value) => value === password.current || 'пароли не совпадают',
             })}
           />
         </PasswordInputContainer>
-        {errors.password && <FormErrorSpan>Это поле обязательно</FormErrorSpan>}
+        {errors.passwordRepeate && <FormErrorSpan>{errors.passwordRepeate.message}</FormErrorSpan>}
 
         <FormSubmitBtn type="submit" />
       </StyledForm>
