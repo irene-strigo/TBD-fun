@@ -76,14 +76,21 @@ export const MainPageManifestWrapper = styled.div`
 `;
 export const SliderPicture = styled.img`
   max-width: 20em;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 `;
 export const CarouselContainer = styled.div`
-  margin: 2em auto;
+  margin: 1.5em auto;
   max-width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 700px) {
+    max-width: 100%;
+  }
+`;
+
+export const SliderHeading = styled.h2`
+  margin: 1em;
 `;
 export const FooterDate = styled.div`
   padding: 0 15px;

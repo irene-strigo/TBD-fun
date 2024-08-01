@@ -9,6 +9,7 @@ import BalladesPage from './pages/BalladesPage';
 import PoetryPage from './pages/PoetryPage';
 import LogInPage from './pages/LoginPage';
 import RegistrationPage from './pages/RegistrationPage';
+import GalleryPage from './pages/GalleryPage';
 
 export const router = createBrowserRouter([
   {
@@ -47,5 +48,9 @@ export const router = createBrowserRouter([
   {
     path: '/registration',
     element: <RegistrationPage />,
+  },
+  {
+    path: '/gallery',
+    element: <GalleryPage />,
   },
 ]);

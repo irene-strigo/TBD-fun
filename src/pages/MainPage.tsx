@@ -10,6 +10,7 @@ import {
   MainPageManifestWrapper,
   ManifestLyricsBLock,
   ManifestPictureContainer,
+  SliderHeading,
   SliderPicture,
 } from '../components/CommonStyles';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -23,7 +24,7 @@ const MainPage = () => {
   const SliderPictures: TSliderPicture[] = [
     { id: 1, url: 'Konj', name: 'Тыбыдындский Конь' },
     { id: 2, url: 'Losj', name: 'Лось' },
-    { id: 3, url: 'Mudak', name: 'Летающий Мудак' },
+    { id: 3, url: 'MudakChB', name: 'Летающий Мудак' },
     { id: 4, url: 'Herli', name: 'Царевна Херли' },
     { id: 5, url: 'Shibzdik', name: 'Шибздик' },
     { id: 6, url: 'Tvarets', name: 'Тварец' },
@@ -39,6 +40,14 @@ const MainPage = () => {
     { id: 16, url: 'Zora', name: 'Жора' },
     { id: 17, url: 'Hryakulenko', name: 'Хрякуленко Дима' },
     { id: 18, url: 'Ja', name: '"Я"' },
+    { id: 19, url: 'Tormoznyh', name: 'Тормозных' },
+    { id: 20, url: 'Martynmilo', name: 'Мартынмыло' },
+    { id: 21, url: 'Merendinka', name: 'Мерендинка' },
+    { id: 22, url: 'Pardon', name: 'ПАрдон, бывший царь' },
+    { id: 23, url: 'Rvachova', name: 'Рвачёва' },
+    { id: 24, url: 'Vojenruk', name: 'Военрук' },
+    { id: 25, url: 'Ked', name: 'Кед' },
+    { id: 26, url: 'GalPetra', name: 'Гал Петра' },
   ];
   return (
     <PageWrapper>
@@ -98,7 +107,7 @@ const MainPage = () => {
         </MainPageManifestWrapper>
 
         <CarouselContainer>
-          <h2>Галерея наших героев</h2>
+          <SliderHeading>Наши персонажи</SliderHeading>
           <Carousel
             showArrows={true}
             showStatus={false}
