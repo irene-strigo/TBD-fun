@@ -5,7 +5,12 @@ export type THeroesData = {
   description?: string;
 };
 export const HeroesData: THeroesData[] = [
-  { id: 1, url: 'Konj', name: 'Тыбыдындский Конь', description: 'Тыбыдындский Конь в пальто - прискакал и насрал!' },
+  {
+    id: 1,
+    url: 'Konj',
+    name: 'Тыбыдындский Конь',
+    description: 'Тыбыдындский Конь в пальто - прискакал и насрал!',
+  },
   { id: 2, url: 'Losj', name: 'Лось' },
   { id: 3, url: 'MudakChB', name: 'Летающий Мудак' },
   { id: 4, url: 'Herli', name: 'Царевна Херли' },

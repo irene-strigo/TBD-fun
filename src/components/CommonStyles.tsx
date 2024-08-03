@@ -301,41 +301,41 @@ export const RegistrationPageInfoDiv = styled.div`
   text-align: center;
 `;
 export const GalleryContainer = styled.div`
- display: flex; 
- flex-wrap: wrap;
- justify-content: space-between;
- margin: 1em;
- `
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1em;
+`;
 export const HeroContainer = styled.div`
- padding: 1em;
-text-align: center;
-width: 20%;
-border: 1px solid black;
-margin: 20px;
-@media screen and (max-width: 900px) {
-   width: 40%
+  padding: 1em;
+  text-align: center;
+  width: 20%;
+  border: 1px solid black;
+  margin: 20px;
+  @media screen and (max-width: 900px) {
+    width: 40%;
   }
 
- @media screen and (max-width: 495px) {
-   width: 100%
+  @media screen and (max-width: 495px) {
+    width: 100%;
   }
-
- `
+`;
 export const GalleryHeroImg = styled.img`
- max-width: 5em;
- `
+  max-width: 5em;
+`;
 export const ModalHeroContainer = styled.div`
- text-align: center;
- padding: 1em;
+  text-align: center;
+  padding: 1em;
   background-color: white;
- *{ background-color: white;}
-
- `
+  * {
+    background-color: white;
+  }
+`;
 export const ModalHeroImg = styled.img`
-max-width: 100%;
-`
+  max-width: 100%;
+`;
 
 export const ModalDescription = styled.div`
-font-style: italic;
-font-size: large;
-`
+  font-style: italic;
+  font-size: large;
+`;
