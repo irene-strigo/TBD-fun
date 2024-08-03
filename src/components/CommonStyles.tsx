@@ -100,7 +100,8 @@ export const PageUpLink = styled.a`
 position: sticky;
   bottom: 5px;
   background-color: #f3f9a5;
-  border: 1px solid #511f31;
+  opacity: 0.6;
+  
   color: #511f31;
   cursor: pointer;
     text-decoration: none;
@@ -299,3 +300,42 @@ export const RegistrationPageInfoDiv = styled.div`
   gap: 10px;
   text-align: center;
 `;
+export const GalleryContainer = styled.div`
+ display: flex; 
+ flex-wrap: wrap;
+ justify-content: space-between;
+ margin: 1em;
+ `
+export const HeroContainer = styled.div`
+ padding: 1em;
+text-align: center;
+width: 20%;
+border: 1px solid black;
+margin: 20px;
+@media screen and (max-width: 900px) {
+   width: 40%
+  }
+
+ @media screen and (max-width: 495px) {
+   width: 100%
+  }
+
+ `
+export const GalleryHeroImg = styled.img`
+ max-width: 5em;
+ `
+export const ModalHeroContainer = styled.div`
+ text-align: center;
+ padding: 1em;
+  background-color: white;
+ *{ background-color: white;}
+
+ `
+export const ModalHeroImg = styled.img`
+max-width: 100%;
+`
+
+export const ModalDescription = styled.div`
+font-style: italic;
+font-size: large;
+`
