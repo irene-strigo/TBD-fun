@@ -13,6 +13,7 @@ const ChatPage = () => {
       <Header />
       <ContentWrapper>
         <div>
+          <img src="/assets/images/pngs/Mudachok5.png"></img>
           <div>{client.user?.id}</div>
           <div>{channel.id}</div>
           Chat Page Work in progress... <FAIcon icon={faCog} color="#a8324a" $animated />

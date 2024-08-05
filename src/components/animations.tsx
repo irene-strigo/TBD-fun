@@ -17,7 +17,17 @@ export const fall = keyframes`
     100% {
       transform: translateY(110vh);
 }`;
+export const slideing = keyframes`
+0% {
+  
+      transform: translateX(90%);
+    }
+      
+    100% {
+      transform: translateX(-90vh);
+}
 
+ `;
 export const diagonalRight = keyframes`
 0% {
         transform: translatex(0) translatey(0)

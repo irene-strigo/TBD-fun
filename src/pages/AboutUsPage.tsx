@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
-import { FAIcon } from '../components/AnimatedComponents';
+import { FAIcon, SlideingBastard } from '../components/AnimatedComponents';
 import Person from '../components/PersonComponent';
 import { AboutUsPageContainer, AboutUsText } from '../components/CommonStyles';
 const AboutUsPage = () => {
+  const [animAction, setAnimAction] = useState(true);
+  const handleClick = (action: boolean) => {
+    return action === true ? setAnimAction(false) : setAnimAction(true);
+  };
+
+  function getRandomInt(min: number, max: number) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  const repeatAnimAction = () => {
+    return setInterval(() => setAnimAction(true), getRandomInt(20000, 40000));
+  };
+  repeatAnimAction();
+
   const Authors = [
     {
       id: 1,
@@ -50,6 +65,13 @@ const AboutUsPage = () => {
       <Header />
       <AboutUsPageContainer>
         <ContentWrapper>
+          <SlideingBastard
+            $animated={animAction}
+            src="/assets/images/pngs/Mudachok2.png"
+            onClick={() => {
+              handleClick(animAction);
+            }}
+          />
           <AboutUsText>
             <p>
               Этот сайт предназначен для хранения творчества нескольких подростков, которые учились

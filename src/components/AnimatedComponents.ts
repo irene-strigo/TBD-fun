@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
-import { fall, spin } from './animations';
+import { fall, slideing, spin } from './animations';
 
 interface FAIconProps extends FontAwesomeIconProps {
   $animated?: boolean;
@@ -36,7 +36,27 @@ export const FallingBastard = styled.img<IMGProps>`
     left: 30%;
   }
 `;
+export const SlideingBastard = styled.img<IMGProps>`
+  ${({ $animated }) =>
+    $animated
+      ? css`
+          opacity: 1;
+          animation: ${slideing} 2s linear infinite;
+        `
+      : css`
+          animation: none;
+          opacity: 0;
+        `}
+  &:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  background-color: unset;
 
+  @media screen and (max-width: 700px) {
+    max-width: 12em;
+  }
+`;
 export const FAIcon = styled(FontAwesomeIcon)<FAIconProps>`
   ${({ $animated }) =>
     $animated
