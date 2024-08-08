@@ -28,9 +28,9 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <div>
+      <a href="/main">
         <HeaderLogoImg src="/assets/images/pngs/Munnik.png"></HeaderLogoImg>
-      </div>
+      </a>
       <HeaderButtonsContainer>
         {headerButtons.map((button) => (
           <NavigationButton key={button.id} link={button.link} label={button.label} />

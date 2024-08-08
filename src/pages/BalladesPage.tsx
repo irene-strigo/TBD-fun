@@ -10,18 +10,17 @@ import {
 } from '../components/CommonStyles';
 import { Ballades } from '../components/Texts/TextBallades';
 import { FallingBastard } from '../components/AnimatedComponents';
-
+export function getRandomInt(min: number, max: number) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 const BalladesPage = () => {
   const [animAction, setAnimAction] = useState(true);
   const handleClick = (action: boolean) => {
     return action === true ? setAnimAction(false) : setAnimAction(true);
   };
 
-  function getRandomInt(min: number, max: number) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
   const repeatAnimAction = () => {
     return setInterval(() => setAnimAction(true), getRandomInt(20000, 40000));
   };

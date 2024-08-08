@@ -196,6 +196,7 @@ export const HeaderButtonsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
 gap: 10px;
+margin: 5px;
 justify-content: center;
   @media screen and (max-width: 495px) {
     display: none;

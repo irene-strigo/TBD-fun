@@ -6,17 +6,13 @@ import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { FAIcon, SlideingBastard } from '../components/AnimatedComponents';
 import Person from '../components/PersonComponent';
 import { AboutUsPageContainer, AboutUsText } from '../components/CommonStyles';
+import { getRandomInt } from './BalladesPage';
 const AboutUsPage = () => {
   const [animAction, setAnimAction] = useState(true);
   const handleClick = (action: boolean) => {
     return action === true ? setAnimAction(false) : setAnimAction(true);
   };
 
-  function getRandomInt(min: number, max: number) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
   const repeatAnimAction = () => {
     return setInterval(() => setAnimAction(true), getRandomInt(20000, 40000));
   };
