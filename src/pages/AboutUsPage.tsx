@@ -3,12 +3,26 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
-import { FAIcon, SlideingBastard } from '../components/AnimatedComponents';
+import { DiagonalBastard, FAIcon, SlideingBastard } from '../components/AnimatedComponents';
 import Person from '../components/PersonComponent';
 import { AboutUsPageContainer, AboutUsText } from '../components/CommonStyles';
 import { getRandomInt } from './BalladesPage';
 const AboutUsPage = () => {
   const [animAction, setAnimAction] = useState(true);
+  /*const [linear] = useState(true);
+  const [diagonal] = useState(true);
+  /*const mins = new Date().getMinutes();
+  const processBastards = () => {
+    if (mins % 2 === 0) {
+      setLinear(true);
+      setDiagonal(false);
+    }
+    if (mins % 2 != 0) {
+      setLinear(false);
+      setDiagonal(true);
+    }
+  };
+*/
   const handleClick = (action: boolean) => {
     return action === true ? setAnimAction(false) : setAnimAction(true);
   };
@@ -59,15 +73,29 @@ const AboutUsPage = () => {
   return (
     <PageWrapper>
       <Header />
+
+      <ContentWrapper>
+        <SlideingBastard
+          $animated={animAction}
+          src="/assets/images/pngs/Mudachok2.png"
+          onClick={() => {
+            handleClick(animAction);
+          }}
+        />
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <DiagonalBastard
+          $animated={animAction}
+          src="/assets/images/pngs/Mudachok3.png"
+          onClick={() => {
+            handleClick(animAction);
+          }}
+        />
+      </ContentWrapper>
+
       <AboutUsPageContainer>
         <ContentWrapper>
-          <SlideingBastard
-            $animated={animAction}
-            src="/assets/images/pngs/Mudachok2.png"
-            onClick={() => {
-              handleClick(animAction);
-            }}
-          />
           <AboutUsText>
             <p>
               Этот сайт предназначен для хранения творчества нескольких подростков, которые учились
