@@ -34,6 +34,6 @@ export const diagonalRight = keyframes`
     }
     100% {
     
-        transform: translatex(100vw) translatey(100vh);
+        transform: translatex(100vw) translatey(-100vh);
     }
 }`;
