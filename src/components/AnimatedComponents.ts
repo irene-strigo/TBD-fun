@@ -75,6 +75,7 @@ export const DiagonalBastard = styled.img<IMGProps>`
   }
   background-color: unset;
   position: fixed;
+  left: 10px;
   @media screen and (max-width: 700px) {
     max-width: 10em;
   }

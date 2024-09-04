@@ -30,10 +30,10 @@ export const slideing = keyframes`
  `;
 export const diagonalRight = keyframes`
 0% {
-        transform: translatex(0px) translatey(-100px)
+        transform: translatex(0px) translatey(0px)
     }
     100% {
     
-        transform: translatex(400vh) translatey(100vw);
+        transform: translatex(100vw) translatey(100vh);
     }
 }`;

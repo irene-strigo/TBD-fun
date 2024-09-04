@@ -9,20 +9,7 @@ import { AboutUsPageContainer, AboutUsText } from '../components/CommonStyles';
 import { getRandomInt } from './BalladesPage';
 const AboutUsPage = () => {
   const [animAction, setAnimAction] = useState(true);
-  /*const [linear] = useState(true);
-  const [diagonal] = useState(true);
-  /*const mins = new Date().getMinutes();
-  const processBastards = () => {
-    if (mins % 2 === 0) {
-      setLinear(true);
-      setDiagonal(false);
-    }
-    if (mins % 2 != 0) {
-      setLinear(false);
-      setDiagonal(true);
-    }
-  };
-*/
+
   const handleClick = (action: boolean) => {
     return action === true ? setAnimAction(false) : setAnimAction(true);
   };
@@ -82,9 +69,6 @@ const AboutUsPage = () => {
             handleClick(animAction);
           }}
         />
-      </ContentWrapper>
-
-      <ContentWrapper>
         <DiagonalBastard
           $animated={animAction}
           src="/assets/images/pngs/Mudachok3.png"
