@@ -18,7 +18,6 @@ export const headerButtons: Button[] = [
   { id: 5, link: '/chat', label: 'Чат' },
   { id: 6, link: '/about-us', label: 'Про нас' },
   { id: 7, link: '/gallery', label: 'Галерея' },
-  { id: 8, link: '/log-in', label: 'Войти' },
 ];
 const Header = () => {
   const [isBurgerOpen, setBurgerOpen] = useState(false);

@@ -7,8 +7,6 @@ import ChatPage from './pages/ChatPage';
 import ProsePage from './pages/ProsePage';
 import BalladesPage from './pages/BalladesPage';
 import PoetryPage from './pages/PoetryPage';
-import LogInPage from './pages/LoginPage';
-import RegistrationPage from './pages/RegistrationPage';
 import GalleryPage from './pages/GalleryPage';
 
 export const router = createBrowserRouter([
@@ -41,14 +39,7 @@ export const router = createBrowserRouter([
     path: '/about-us',
     element: <AboutUsPage />,
   },
-  {
-    path: '/log-in',
-    element: <LogInPage />,
-  },
-  {
-    path: '/registration',
-    element: <RegistrationPage />,
-  },
+
   {
     path: '/gallery',
     element: <GalleryPage />,

@@ -2,22 +2,18 @@ import React from 'react';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { FAIcon } from '../components/AnimatedComponents';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
 
-import { channel, client } from '../services/ChatClient';
+import { ChatPointer, ChatPointerContainer } from '../components/CommonStyles';
 
 const ChatPage = () => {
   return (
     <PageWrapper>
       <Header />
       <ContentWrapper>
-        <div>
+        <ChatPointerContainer>
           <img src="/assets/images/pngs/Mudachok5.png"></img>
-          <div>{client.user?.id}</div>
-          <div>{channel.id}</div>
-          Chat Page Work in progress... <FAIcon icon={faCog} color="#a8324a" $animated />
-        </div>
+          <ChatPointer href="https://t.me/+3tT5NbLoUtliZmQ6">вот здесь</ChatPointer>
+        </ChatPointerContainer>
       </ContentWrapper>
       <Footer />
     </PageWrapper>

@@ -340,3 +340,22 @@ export const ModalDescription = styled.div`
   font-style: italic;
   font-size: large;
 `;
+export const ChatPointerContainer = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+`;
+export const ChatPointer = styled.a`
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 50px);
+  color: black;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding-bottom: 65px;
+  &:hover,
+  :focus {
+    color: transparent;
+    transition: 500ms ease;
+  }
+`;
