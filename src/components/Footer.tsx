@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <div>
-        <HeaderLogoImg src="/assets/images/pngs/Losj.png" />
+        <HeaderLogoImg src="/assets/images/pngs/Mudachok6.png" />
         <FooterDate>2024</FooterDate>
       </div>
     </FooterWrapper>
