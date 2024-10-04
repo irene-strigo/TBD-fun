@@ -1,12 +1,7 @@
 import styled, { css } from 'styled-components';
 
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { diagonalRight, fall, slideing } from './animations';
 
-import { diagonalRight, fall, slideing, spin } from './animations';
-
-interface FAIconProps extends FontAwesomeIconProps {
-  $animated?: boolean;
-}
 interface IMGProps {
   $animated?: boolean;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
@@ -52,7 +47,8 @@ export const SlideingBastard = styled.img<IMGProps>`
     animation-play-state: paused;
   }
   background-color: unset;
-
+  position: absolute;
+  right: 10px;
   max-width: 16em;
   @media screen and (max-width: 700px) {
     max-width: 10em;
@@ -80,14 +76,4 @@ export const DiagonalBastard = styled.img<IMGProps>`
   @media screen and (max-width: 700px) {
     max-width: 10em;
   }
-`;
-export const FAIcon = styled(FontAwesomeIcon)<FAIconProps>`
-  ${({ $animated }) =>
-    $animated
-      ? css`
-          animation: ${spin} 4s infinite linear;
-        `
-      : css`
-          animation: none;
-        `}
 `;

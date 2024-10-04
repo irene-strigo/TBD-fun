@@ -18,13 +18,14 @@ export const fall = keyframes`
       transform: translateY(110vh);
 }`;
 export const slideing = keyframes`
+
 0% {
   
-      transform: translateX(90%);
+      transform: translateX(-10%);
     }
       
     100% {
-      transform: translateX(-90vh);
+       transform: translate(-100vw);
 }
 
  `;

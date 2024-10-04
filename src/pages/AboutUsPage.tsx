@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
-import { DiagonalBastard, FAIcon, SlideingBastard } from '../components/AnimatedComponents';
+import { DiagonalBastard, SlideingBastard } from '../components/AnimatedComponents';
 import Person from '../components/PersonComponent';
 import { AboutUsPageContainer, AboutUsText } from '../components/CommonStyles';
 import { getRandomInt } from './BalladesPage';
@@ -23,7 +22,7 @@ const AboutUsPage = () => {
     {
       id: 1,
       name: 'Ира',
-      foto: '/assets/images/ai-portraits/Ira3.jpg',
+      foto: '/assets/images/ai-portraits/IraNew.jpg',
       text: (
         <>
           Создательница множества текстов, любительница глубокомысленных глупостей и&nbsp;неуклюжей
@@ -35,7 +34,7 @@ const AboutUsPage = () => {
     {
       id: 2,
       name: 'Лена',
-      foto: '/assets/images/ai-portraits/Lena1.png',
+      foto: '/assets/images/ai-portraits/LenaNew.jpg',
       text: (
         <>
           Талантливая рисовальщица, придумавшая и&nbsp;воплотившая в&nbsp;жизнь все образы наших
@@ -48,7 +47,7 @@ const AboutUsPage = () => {
     {
       id: 3,
       name: 'Алёна',
-      foto: '/assets/images/ai-portraits/Alyonka.jpg',
+      foto: '/assets/images/ai-portraits/AlyonkaNew.jpg',
       text: (
         <>
           Вдохновительница всех текстов и&nbsp;хранительница их&nbsp;бумажных первоисточников.
@@ -93,10 +92,6 @@ const AboutUsPage = () => {
         {Authors.map((author) => (
           <Person key={author.id} name={author.name} text={author.text} image={author.foto} />
         ))}
-        <div>
-          {' '}
-          About Us Page Work in progress... <FAIcon icon={faCog} color="#a8324a" $animated />
-        </div>
       </AboutUsPageContainer>
       <Footer />
     </PageWrapper>

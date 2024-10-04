@@ -1,6 +1,5 @@
 import React from 'react';
 import { FooterDate, FooterWrapper, HeaderLogoImg } from './CommonStyles';
-
 const Footer = () => {
   return (
     <FooterWrapper>
