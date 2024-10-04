@@ -179,7 +179,7 @@ export const PersonContainer = styled.div`
 `;
 export const PersonTextContainer = styled.div`
   padding: 20px;
-  max-width: 65%;
+  width: 65%;
   @media screen and (max-width: 700px) {
     max-width: 90%;
   }
@@ -357,5 +357,10 @@ export const ChatPointer = styled.a`
   :focus {
     color: transparent;
     transition: 500ms ease;
+  }
+`;
+export const AboutUsName = styled.h2`
+  @media screen and (max-width: 900px) {
+    text-align: center;
   }
 `;

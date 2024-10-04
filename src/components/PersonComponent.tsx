@@ -1,5 +1,11 @@
 import React, { ReactElement } from 'react';
-import { AuthorImage, PersonContainer, PersonText, PersonTextContainer } from './CommonStyles';
+import {
+  AboutUsName,
+  AuthorImage,
+  PersonContainer,
+  PersonText,
+  PersonTextContainer,
+} from './CommonStyles';
 type Props = {
   name: string;
   text: ReactElement;
@@ -10,7 +16,7 @@ const Person = ({ name, text, image }: Props) => {
     <PersonContainer>
       <AuthorImage src={image} alt="portrait"></AuthorImage>
       <PersonTextContainer>
-        <h2>{name}</h2>
+        <AboutUsName>{name}</AboutUsName>
         <PersonText>{text}</PersonText>
       </PersonTextContainer>
     </PersonContainer>

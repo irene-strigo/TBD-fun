@@ -50,7 +50,7 @@ const BalladesPage = () => {
         </ContentWrapper>
         <ContentWrapper>
           {' '}
-          <FlyingBastards src="/assets/images/jpgs/FlyingBastards.jpg"></FlyingBastards>
+          <FlyingBastards src="/assets/images/pngs/FlyingBastards2.png"></FlyingBastards>
         </ContentWrapper>
 
         {Ballades.map((ballade) => {
