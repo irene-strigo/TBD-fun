@@ -140,6 +140,10 @@ export const ListLink = styled.a`
 `;
 export const FlyingBastards = styled.img`
   max-width: 90%;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
 `;
 export const CenteredContent = styled.div`
   display: flex;

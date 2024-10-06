@@ -9,7 +9,7 @@ import {
   PageUpLink,
 } from '../components/CommonStyles';
 import { Ballades } from '../components/Texts/TextBallades';
-import { FallingBastard } from '../components/AnimatedComponents';
+import { FallingBastard, FastBastard } from '../components/AnimatedComponents';
 export function getRandomInt(min: number, max: number) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -29,14 +29,6 @@ const BalladesPage = () => {
     <PageWrapper>
       <Header />
       <BalladesPageContainer>
-        <FallingBastard
-          src="/assets/images/pngs/Mudak.png"
-          $animated={animAction}
-          onClick={() => {
-            handleClick(animAction);
-          }}
-        />
-
         <ContentWrapper id="List">
           <ContentWrapper>
             {Ballades.map((ballade) => {
@@ -47,15 +39,28 @@ const BalladesPage = () => {
               );
             })}
           </ContentWrapper>
-        </ContentWrapper>
-        <ContentWrapper>
-          {' '}
-          <FlyingBastards src="/assets/images/pngs/FlyingBastards2.png"></FlyingBastards>
-        </ContentWrapper>
-
+        </ContentWrapper>{' '}
+        <FlyingBastards src="/assets/images/pngs/FlyingBastards2.png"></FlyingBastards>
+        <FallingBastard
+          src="/assets/images/pngs/FlyingOne.png"
+          $animated={animAction}
+          onClick={() => {
+            handleClick(animAction);
+          }}
+        />
         {Ballades.map((ballade) => {
           return (
             <ContentWrapper key={ballade.id} id={ballade.id}>
+              <ContentWrapper>
+                <FastBastard
+                  $animated={animAction}
+                  src="/assets/images/pngs/FastBastard.png"
+                  onClick={() => {
+                    handleClick(animAction);
+                  }}
+                  alt="fast bastard"
+                ></FastBastard>
+              </ContentWrapper>
               <h2>{ballade.heading}</h2>
               <LyricsBlock>{ballade.text}</LyricsBlock>
             </ContentWrapper>

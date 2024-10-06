@@ -17,15 +17,22 @@ export const fall = keyframes`
     100% {
       transform: translateY(110vh);
 }`;
-export const slideing = keyframes`
-
-0% {
-  
-      transform: translateX(-10%);
+export const slideingRotate = keyframes`
+0%{
+      transform: translateX(-10%) rotate(-10deg);
     }
-      
+     10%{
+      transform: translateX(-10%) rotate(10deg);
+    }
+      20%{
+      transform: translateX(-10%) rotate(-10deg);
+    }
+      50% {
+        transform:  rotate(10deg);
+      }
+         
     100% {
-       transform: translate(-100vw);
+       transform: translate(-100vw) rotate(-10deg);
 }
 
  `;
@@ -37,4 +44,13 @@ export const diagonalRight = keyframes`
     
         transform: translatex(100vw) translatey(-100vh);
     }
+}`;
+
+export const slideing = keyframes`
+0%{
+      transform: translateX(-10%) ;
+    }
+      
+    100% {
+       transform: translate(-100vw) ;
 }`;
