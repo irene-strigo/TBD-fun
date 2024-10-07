@@ -15,3 +15,15 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   padding: 10px;
 `;
+
+export const AnimationWrapper = styled.div`
+  height: 100%;
+  min-height: 10em;
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+`;

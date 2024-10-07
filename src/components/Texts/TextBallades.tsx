@@ -1,3 +1,5 @@
+import { CenteredStars } from '../CommonStyles';
+
 export const Ballades = [
   {
     id: 'Ballade1',
@@ -424,7 +426,7 @@ export const Ballades = [
           <br />
           Любу нашу там не&nbsp;спас.
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Раз, два, три, четыре, пять!
           <br />
           Начинаем подыхать.
@@ -437,7 +439,7 @@ export const Ballades = [
           <br />
           Слышат этот дикий звук.
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Лось, сдуревший, облысевший,
           <br />
           С&nbsp;самоваром, окосевший
@@ -489,7 +491,7 @@ export const Ballades = [
           <br />
           Она песни ему пела.
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           &laquo;Сижу я&nbsp;под партой
           <br />
           В&nbsp;темнице сырой,
@@ -538,7 +540,7 @@ export const Ballades = [
           <br />
           Ах&nbsp;Люба, ах&nbsp;шило!
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Ночь темна.
           <br />
           В&nbsp;рекреации светит луна.
@@ -549,7 +551,7 @@ export const Ballades = [
           <br />
           Ах, на&nbsp;гОре! Ведь Ёжик про это узнал
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Вместе со&nbsp;Кедом Ёжик идёт,
           <br />
           Сумку большую с&nbsp;собой он&nbsp;несёт.
@@ -566,7 +568,7 @@ export const Ballades = [
           <br />
           И&nbsp;&laquo;чемодан&raquo; на&nbsp;чердак утащили.
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Я&nbsp;вам задам один вопрос:
           <br />
           &laquo;Что делал в&nbsp;школе лысый Лось?&raquo;
@@ -591,7 +593,7 @@ export const Ballades = [
           <br />
           Ему те&nbsp;лыжи и&nbsp;удрать.
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Вдруг слышит лосик&nbsp;&mdash; жуткий крик.
           <br />
           Он&nbsp;с&nbsp;чердака. Физрук наш вмиг
@@ -618,7 +620,7 @@ export const Ballades = [
           <br />
           Ворвался лосик!!!&hellip;
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Я&nbsp;думаю, немало вы, бесценные друзья,
           <br />
           Наслышаны о&nbsp;храбрости нашего Лося.
@@ -2548,7 +2550,7 @@ export const Ballades = [
           <br />
           Так люби&nbsp;ж и&nbsp;нас читать!
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Когда на&nbsp;острове дуб зеленел
           <br />
           И&nbsp;птицы в&nbsp;ветвях его радостно пели,
@@ -2614,7 +2616,7 @@ export const Ballades = [
           <br />
           Ан&nbsp;нет! Опоздали. Совсем не&nbsp;успели).
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Чтобы было вам понятно,
           <br />
           Надо сразу объяснить:
@@ -2641,7 +2643,7 @@ export const Ballades = [
           <br />
           И&nbsp;весь род свой ненавидит.
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Нет начала без конца.
           <br />
           И&nbsp;остались без отца
@@ -2709,7 +2711,7 @@ export const Ballades = [
           <br />
           Назло сибирским морозам.
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Потомство Фиса процветало.
           <br />
           [Куда ты&nbsp;тянешь одеяло???!!!&hellip;]
@@ -2789,7 +2791,7 @@ export const Ballades = [
           <br />
           И&nbsp;снова в&nbsp;пиво канул он.
           <br />
-          <p>***</p>
+          <CenteredStars>***</CenteredStars>
           Мы&nbsp;знаем, с&nbsp;трепетом в&nbsp;душе
           <br />
           Вы&nbsp;догадались все уже,

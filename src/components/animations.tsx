@@ -19,20 +19,35 @@ export const fall = keyframes`
 }`;
 export const slideingRotate = keyframes`
 0%{
-      transform: translateX(-10%) rotate(-10deg);
+      transform: translateX(100%);
     }
+      5%{
+       transform: translateX( -5%) ;
+      }
      10%{
-      transform: translateX(-10%) rotate(10deg);
+      transform: translateX( -20%);
     }
+      15%{
+      transform:   translateX( -30%)rotate(10deg);
+      }
       20%{
-      transform: translateX(-10%) rotate(-10deg);
+      transform:  rotate(-20deg);
+    }
+       25%{
+      transform:  rotate(20deg);
+    }
+      30%{
+      transform:  rotate(-20deg);
     }
       50% {
-        transform:  rotate(10deg);
+        transform:  rotate(20deg);
       }
-         
+         55% {
+        transform:  rotate(-20deg);
+      } 
+      
     100% {
-       transform: translate(-100vw) rotate(-10deg);
+       transform: translateX(-100vw) rotate(20deg);
 }
 
  `;

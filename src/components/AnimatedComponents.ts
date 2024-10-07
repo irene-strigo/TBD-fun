@@ -23,7 +23,6 @@ export const FastBastard = styled.img<IMGProps>`
   }
   background-color: unset;
   position: absolute;
-  right: 10px;
   max-width: 16em;
   @media screen and (max-width: 700px) {
     max-width: 10em;

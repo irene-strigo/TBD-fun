@@ -134,7 +134,7 @@ export const ListLink = styled.a`
   margin-bottom: 1em;
   &:hover,
   :focus {
-    transform: scale(1.5);
+    transform: scale(1.1);
     color: #ce871d;
   }
 `;
@@ -367,4 +367,10 @@ export const AboutUsName = styled.h2`
   @media screen and (max-width: 900px) {
     text-align: center;
   }
+`;
+export const CenteredStars = styled.p`
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  max-width: 12em;
 `;

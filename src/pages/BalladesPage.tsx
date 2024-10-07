@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Header, Footer } from '../components';
-import { ContentWrapper, PageWrapper } from './PagesStyles';
+import { AnimationWrapper, ContentWrapper, PageWrapper } from './PagesStyles';
 import {
   BalladesPageContainer,
   FlyingBastards,
@@ -22,7 +22,7 @@ const BalladesPage = () => {
   };
 
   const repeatAnimAction = () => {
-    return setInterval(() => setAnimAction(true), getRandomInt(20000, 40000));
+    return setInterval(() => setAnimAction(true), getRandomInt(20000, 50000));
   };
   repeatAnimAction();
   return (
@@ -51,7 +51,7 @@ const BalladesPage = () => {
         {Ballades.map((ballade) => {
           return (
             <ContentWrapper key={ballade.id} id={ballade.id}>
-              <ContentWrapper>
+              <AnimationWrapper>
                 <FastBastard
                   $animated={animAction}
                   src="/assets/images/pngs/FastBastard.png"
@@ -60,7 +60,7 @@ const BalladesPage = () => {
                   }}
                   alt="fast bastard"
                 ></FastBastard>
-              </ContentWrapper>
+              </AnimationWrapper>
               <h2>{ballade.heading}</h2>
               <LyricsBlock>{ballade.text}</LyricsBlock>
             </ContentWrapper>
