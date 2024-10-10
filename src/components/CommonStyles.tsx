@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const NavButton = styled(Link)`
   background-color: #f3f9a5;
   max-height: 50px;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid #f3f9a5;
   color: #511f31;
   cursor: pointer;
@@ -14,11 +14,13 @@ export const NavButton = styled(Link)`
   text-decoration: none;
   font-size: clamp(1rem, 1vw, 1.5rem);
   white-space: nowrap;
+  transition: box-shadow 0.5s;
 
   &:hover,
   :focus {
     background-color: #f7f9ff;
     color: #2c5777;
+    box-shadow: 0 8px 25px #e6ba19;
   }
   @media screen and (max-width: 900px) {
     margin: 5px;
@@ -30,6 +32,7 @@ export const HeaderWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid black;
   @media screen and (max-width: 900px) {
@@ -144,7 +147,9 @@ export const FlyingBastards = styled.img`
   position: relative;
   display: flex;
   margin: 0 auto;
+  background: none;
 `;
+
 export const CenteredContent = styled.div`
   display: flex;
   text-align: center;
@@ -217,7 +222,7 @@ export const BurgerButtonsContainer = styled.div`
    flex-direction:column;
    position: absolute;
        width: 100%;
-       top: 5em;
+       top: 5.5em;
        left: 0px;
    }
  }

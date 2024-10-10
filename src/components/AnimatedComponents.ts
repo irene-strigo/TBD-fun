@@ -47,10 +47,10 @@ export const FallingBastard = styled.img<IMGProps>`
   position: sticky;
   top: 5px;
   left: 45%;
-  max-width: 11em;
+  max-width: 10em;
   @media screen and (max-width: 700px) {
-    left: 30%;
-    max-width: 8em;
+    left: 35%;
+    max-width: 7em;
   }
 `;
 export const SlideingBastard = styled.img<IMGProps>`

@@ -4,7 +4,7 @@ Website project with children's poems and drawings
 
 ## Deploy link
 
-https://stalwart-trifle-58be12.netlify.app/
+https://tbdfun.ru/
 
 ### Useful commands:
 
