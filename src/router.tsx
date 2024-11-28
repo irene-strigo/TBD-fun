@@ -9,6 +9,7 @@ import BalladesPage from './pages/BalladesPage';
 import PoetryPage from './pages/PoetryPage';
 import GalleryPage from './pages/GalleryPage';
 
+
 export const router = createBrowserRouter([
   {
     path: '/',

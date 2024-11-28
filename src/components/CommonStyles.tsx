@@ -379,3 +379,14 @@ export const CenteredStars = styled.p`
   justify-content: center;
   max-width: 12em;
 `;
+
+export const SwitchThemeButtonIcon = styled.img`
+margin: 20px;
+width: 30px;
+`
+
+
+export const themes = {
+  light: { color: 'black', backgroundColor: 'rgb(255, 248, 220)' },
+  dark: { color: 'white', backgroundColor: '#584b77' },
+}
