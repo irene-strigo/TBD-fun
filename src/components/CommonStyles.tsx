@@ -222,7 +222,7 @@ export const BurgerButtonsContainer = styled.div`
    flex-direction:column;
    position: absolute;
        width: 100%;
-       top: 5.5em;
+       top: 11.5em;
        left: 0px;
    }
  }
@@ -381,12 +381,18 @@ export const CenteredStars = styled.p`
 `;
 
 export const SwitchThemeButtonIcon = styled.img`
-margin: 20px;
-width: 30px;
-`
-
+  margin: 20px;
+  width: 30px;
+`;
 
 export const themes = {
   light: { color: 'black', backgroundColor: 'rgb(255, 248, 220)' },
   dark: { color: 'white', backgroundColor: '#584b77' },
-}
+};
+
+export const SwitchButtonWrapper = styled.div`
+  width: 50px;
+
+  display: flex;
+  justify-content: center;
+`;

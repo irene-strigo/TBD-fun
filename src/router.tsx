@@ -8,7 +8,7 @@ import ProsePage from './pages/ProsePage';
 import BalladesPage from './pages/BalladesPage';
 import PoetryPage from './pages/PoetryPage';
 import GalleryPage from './pages/GalleryPage';
-
+import NewBloodPage from './pages/NewBloodPage';
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +31,10 @@ export const router = createBrowserRouter([
   {
     path: '/poetry',
     element: <PoetryPage />,
+  },
+  {
+    path: '/newBlood',
+    element: <NewBloodPage />,
   },
   {
     path: '/chat',

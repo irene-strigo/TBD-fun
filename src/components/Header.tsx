@@ -1,13 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 
 import NavigationButton from './NavigationButton';
-import { HeaderButtonsContainer, HeaderLogoImg, HeaderWrapper, themes } from './CommonStyles';
+import { HeaderButtonsContainer, HeaderLogoImg, HeaderWrapper } from './CommonStyles';
 import BurgerButton from './BurgerButton';
 import BurgerComponent from './BurgerComponent';
-import ThemeSwitchButton from './ThemeSwitchButton';
-import { ThemeContext } from './App';
-
-
 
 export type Button = {
   id: number;
@@ -19,9 +15,10 @@ export const headerButtons: Button[] = [
   { id: 2, link: '/ballades', label: 'Баллады Великого Мунника' },
   { id: 3, link: '/prose', label: 'Проза' },
   { id: 4, link: '/poetry', label: 'Стихи' },
-  { id: 5, link: '/chat', label: 'Чат' },
-  { id: 6, link: '/about-us', label: 'Про нас' },
-  { id: 7, link: '/gallery', label: 'Галерея' },
+  { id: 5, link: '/newBlood', label: 'Новое поколение' },
+  { id: 6, link: '/chat', label: 'Чат' },
+  { id: 7, link: '/about-us', label: 'Про нас' },
+  { id: 8, link: '/gallery', label: 'Галерея' },
 ];
 
 const Header = () => {
@@ -29,12 +26,6 @@ const Header = () => {
   function processBurger() {
     return isBurgerOpen ? setBurgerOpen(false) : setBurgerOpen(true);
   }
-  /*const theme = useContext(ThemeContext);
-  let [currentTheme, setTheme] = useState(theme);
-
-  const changeTheme = () => {
-    return currentTheme === themes.light ? setTheme(themes.dark) : setTheme(themes.light)
-  }*/
 
   return (
     <HeaderWrapper>
@@ -44,13 +35,16 @@ const Header = () => {
       <HeaderButtonsContainer>
         {headerButtons.map((button) => (
           <NavigationButton key={button.id} link={button.link} label={button.label} />
-
         ))}
-
       </HeaderButtonsContainer>
       {isBurgerOpen && (
         <>
-          <BurgerComponent isOpen={isBurgerOpen}></BurgerComponent>
+          <BurgerComponent
+            isOpen={isBurgerOpen}
+            onClick={() => {
+              setBurgerOpen(false);
+            }}
+          ></BurgerComponent>
         </>
       )}
       <BurgerButton
