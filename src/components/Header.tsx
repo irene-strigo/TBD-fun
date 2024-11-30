@@ -4,6 +4,7 @@ import NavigationButton from './NavigationButton';
 import { HeaderButtonsContainer, HeaderLogoImg, HeaderWrapper } from './CommonStyles';
 import BurgerButton from './BurgerButton';
 import BurgerComponent from './BurgerComponent';
+import { Link } from 'react-router-dom';
 
 export type Button = {
   id: number;
@@ -29,9 +30,9 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <a href="/main">
+      <Link to="/main">
         <HeaderLogoImg src="/assets/images/pngs/Munnik.png"></HeaderLogoImg>
-      </a>
+      </Link>
       <HeaderButtonsContainer>
         {headerButtons.map((button) => (
           <NavigationButton key={button.id} link={button.link} label={button.label} />

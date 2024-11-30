@@ -132,6 +132,7 @@ position: sticky;
 `;
 export const ListLink = styled.a`
   color: black;
+  font-size: large;
   text-decoration: none;
   transition: transform 0.2s;
   margin-bottom: 1em;

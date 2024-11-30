@@ -53,4 +53,7 @@ export const HeroesData: THeroesData[] = [
   { id: 24, url: 'Munnik', name: 'Великий Мунник' },
   { id: 25, url: 'Tvarets', name: 'Тварец' },
   { id: 26, url: 'NashYunijDrug', name: 'Наш юный друг' },
+  { id: 27, url: 'Vever', name: 'Вебер' },
+  { id: 28, url: 'Kvakina', name: 'Квакина' },
+  { id: 29, url: 'Tjoma', name: 'Тёма' },
 ];

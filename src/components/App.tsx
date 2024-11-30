@@ -4,6 +4,7 @@ import { themes } from './CommonStyles';
 import { createContext, useContext, useState } from 'react';
 
 import ThemeSwitchButton from './ThemeSwitchButton';
+
 export type ThemeContextType = object;
 
 export const ThemeContext = createContext<ThemeContextType>(themes.light);
@@ -16,7 +17,7 @@ const App = () => {
     return currentTheme === themes.light ? setTheme(themes.dark) : setTheme(themes.light);
   };
 
-  console.log('app', currentTheme);
+  //console.log('app', currentTheme);
   return (
     <ThemeContext.Provider value={currentTheme}>
       <div style={currentTheme}>

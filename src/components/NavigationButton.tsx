@@ -1,9 +1,11 @@
+import { ReactElement } from 'react';
 import { NavButton } from './CommonStyles';
 
 type Props = {
   link: string;
-  label: string;
+  label?: string;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  children?: ReactElement;
 };
 
 const NavigationButton = ({ link, label, onClick }: Props) => {
