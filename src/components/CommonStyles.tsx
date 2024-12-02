@@ -79,7 +79,7 @@ export const MainPageManifestWrapper = styled.div`
 `;
 export const SliderPicture = styled.img`
   max-width: 20em;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 `;
 export const CarouselContainer = styled.div`
   margin: 1.5em auto;
@@ -396,4 +396,14 @@ export const SwitchButtonWrapper = styled.div`
 
   display: flex;
   justify-content: center;
+`;
+
+export const IllustrationImg = styled.img`
+  max-width: 30%;
+  max-height: 300px;
+`;
+export const IllustrantionsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 `;

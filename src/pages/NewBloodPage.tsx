@@ -1,7 +1,13 @@
 import React from 'react';
 import { Header, Footer } from '../components';
 import { ContentWrapper, PageWrapper } from './PagesStyles';
-import { ListLink, LyricsBlock, PageUpLink, PanImg } from '../components/CommonStyles';
+import {
+  IllustrantionsWrapper,
+  IllustrationImg,
+  ListLink,
+  LyricsBlock,
+  PageUpLink,
+} from '../components/CommonStyles';
 
 import { NewBloodPoetry } from '../components/Texts/TextNewBlood';
 
@@ -9,9 +15,13 @@ const PoetryPage = () => {
   return (
     <PageWrapper>
       <Header />
-      <ContentWrapper>
-        <PanImg src="/assets/images/pngs/Vever.png" alt="Veber"></PanImg>
-      </ContentWrapper>
+
+      <IllustrantionsWrapper>
+        <IllustrationImg src="/assets/images/pngs/Kvakina.png" alt="Veber"></IllustrationImg>
+        <IllustrationImg src="/assets/images/pngs/Vever.png" alt="Veber"></IllustrationImg>
+        <IllustrationImg src="/assets/images/pngs/Tjoma.png" alt="Veber"></IllustrationImg>
+      </IllustrantionsWrapper>
+
       <ContentWrapper id="List">
         <ListLink href="#Quarter">Квартет</ListLink>
         <ListLink href="#Dinner">Несвоевременный обед</ListLink>
